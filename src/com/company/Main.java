@@ -86,7 +86,7 @@ public class Main {
         ArrayList<String> newLines = new ArrayList<>();
         Boolean fix = true;
         for(String line: oldLines){
-            if (line.toLowerCase().contains("volume(") && fix) {
+            if (line.toLowerCase().trim().contains("volume") && fix) {
                 newLines.add(line.substring(0, line.indexOf("(") + 1) + newVolume +")");
                 fix = false;
             } else {
